@@ -71,6 +71,8 @@ def page_worker_crawler(scene_length, page_number):
                     page_idx = driver.find_element_by_xpath("//*[@class='paging']")\
                         .find_elements_by_tag_name("li")[j]
                     page_idx.find_element_by_tag_name("a").click()
+                    # response 대기 3초
+                    # driver.implicitly_wait(3)
                 else:
                     checker = True
             except:
